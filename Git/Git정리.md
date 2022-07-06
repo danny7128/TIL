@@ -98,34 +98,59 @@ typora == 마크다운 에디터(editor==편집기)
 
 - git init
 
-- git status
+  > 로컬 저장소 생성
+
+- git add `파일명`
+
+  > 특정 파일/폴더의 변경사항 추가
 
 - git add .
 
-- git commit -m '1.txt와2.txt를 만들었음
+  > 모든 파일/폴더의 변경사항 추가
+
+- git commit -m '<커밋메시지>'
+
+  > 커밋(버전 기록)
+
+- git status
+
+  > 상태 확인
 
 - git log
+
+  > 버전 확인
 
   
 
 - git config --global user.email "kdt-live@hphk.kr"
+
 - git config --global user.name "kdt-live"
 
 
 
 ## 기본 흐름
+
+1. **작업을 하고**
+2. **변경된 파일을 모아 (add)**
+3. **버전으로 남긴다. (commit)**
+
+
+
 Staging 단계가 있는 이유 : 버전으로 기록할 파일을 모으는 '임시공간' 으로 단순하게 생각해주시면 됩니다~!
 
-modified : 파일이 수정된 상태
-staged :
-committed : 커밋이 완료된 상태
+- modified : 파일이 수정된 상태
+- staged :
+- committed : 커밋이 완료된 상태
 
-git log
-현재 저장소에 기록된 커밋(=버전)을 조회
+- git log
 
-git log -1(이전(=최근)커밋 1개 가져와라)
-git log --online
-git log -2 --oneline:최근 2개를 한줄로 보여줘
+  > 현재 저장소에 기록된 커밋(=버전)을 조회
+
+- git log -1 : (이전(=최근)커밋 1개 가져와라)
+- git log --online : 한줄로 보여줘
+- git log -2 --oneline:최근 2개를 한줄로 보여줘
+
+
 
 nothing to commit == 1.커밋할 것이 없다! => staging area가 비어있다~!
 
