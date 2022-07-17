@@ -3,4 +3,4 @@
 # True 를 출력하는 프로그램을 작성해보자.
 
 a, b = map(int,input().split())
-print(bool(a)==0 and bool(b)==0)
+print(not(bool(a) or bool(b)))
