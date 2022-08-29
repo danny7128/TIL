@@ -52,7 +52,7 @@ typora == 마크다운 에디터(editor==편집기)
 
 ## 마크다운 문법 - Inline Code block
 
-- backtick 기호 1개를 인라인에 활용하여 작성('')
+- backtick 기호 1개를 인라인에 활용하여 작성(``)
 
 
 
