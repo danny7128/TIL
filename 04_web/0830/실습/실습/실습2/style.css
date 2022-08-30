@@ -1,0 +1,25 @@
+/* 아래에 CSS를 작성해주세요. */
+
+.card{
+  width: 300px;
+}
+
+.card-img{
+  width: 100%;
+}
+
+.color-skyblue{
+  color: skyblue;
+}
+
+.font-20{
+  font-size: 20pt;
+}
+
+.color-gray {
+  color: gray;
+}
+
+.hor-400{
+  width: 400px;
+}
