@@ -1,0 +1,25 @@
+/* 아래에 CSS를 작성해주세요. */
+
+.center{
+  text-align: center;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  width: 900px;
+  justify-content: center;
+}
+
+.card {
+  width: 300px; 
+}
+
+.sub-title{
+  display: block;
+  font-size: 12px;
+}
+.card-img{
+  width: 100%;
+}
+

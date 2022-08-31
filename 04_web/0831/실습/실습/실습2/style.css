@@ -1,0 +1,14 @@
+/* 아래에 CSS를 작성해주세요. */
+.cards {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.card-img{
+  width: 100%;
+}
+
+.color-aqua {
+  color: aqua;
+}
