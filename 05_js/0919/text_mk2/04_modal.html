@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modal-style {
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* 백그라운드 너비 높이 100% */
+      /* display: flex; */
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100vh;
+      /* 글자 위치와 색깔 */
+      color: white;
+      justify-content: center;
+      align-items: center;
+      /* 글자 숨기기 */
+      display: none;
+    }
+    .active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <button id="modal-btn">모달 버튼</button>
+  <div id="modal-content" class="modal-style">모달
+    
+  </div>
+
+  <script>
+    // 버튼을 눌렀을때
+    const modalbtn = document.querySelector('#modal-btn')
+    modalbtn.addEventListener('click',function() {
+      document.querySelector('#modal-content').classList.toggle('active')
+    })
+    // 모달 취소
+    const modal_else = document.querySelector('#modal-content')
+    modal_else.addEventListener('click',function() {
+      document.querySelector('#modal-content').classList.toggle('active')
+    })
+   
+
+  </script>
+
+  
+</body>
+</html>
