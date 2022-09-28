@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>index.html</h1>
+
+  <!-- 사용자에게 정보를 입력 받을 때 -->
+  <!-- form 태그를 사용해야한다. -->
+  <!-- action : 어떤 url을 요청할지 -->
+  <form action="{% url 'todos:create' %}">
+    내용<input type="text" name="content___" id="" maxlength="10">
+    우선 순위<input type="text" name="priority" id="">
+    마감기한 <input type="text" name="deadline" id="">
+    <input type="submit" value="할 일 추가">
+  </form>
+  <hr>
+
+  <!-- DTL for문 사용법 -->
+  <ul>
+
+    {% for todo in todos %}
+    <li>{{ todo.pk }} - {{ todo.content}} - {{ todo.completed}} <a href="{% url 'todos:delete' todo.pk %}">삭제</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+</body>
+
+</html>
