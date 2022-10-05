@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="m-5 p-3 border border-3 border-info rounded">
+
+  <h3>제목 : {{v.title}}</h3>
+  <h5>내용 : {{v.content}}</h5>
+  <p>만든날짜 : {{v.created_at}} | 수정날짜 : {{v.updated_at}}</p>
+</div>
+<button><a href="{% url 'articles:delete' v.pk %}">삭제</a></button>
+<button><a href="{% url 'articles:update' v.pk %}">수정</a></button>
+
+{% endblock %}
