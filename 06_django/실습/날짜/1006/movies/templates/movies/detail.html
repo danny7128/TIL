@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>{{ article.pk }}번 게시글</h1>
+  <p>{{ article.running_time }}</p>
+  <p>
+    {{ article.summary }}
+  </p>
+  <p>{{ article.created_at }}
+    |
+    {{ article.updated_at }}</p>
+
+  <a href="{% url 'movies:update' article.pk %}">수정하기</a>
+{% endblock %}

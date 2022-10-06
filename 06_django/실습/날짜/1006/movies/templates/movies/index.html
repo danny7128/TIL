@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <h1>게시판</h1>
+  <a href="{% url 'movies:create' %}">글 쓰기</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">pk</th>
+        <th scope="col">영화 제목</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in todos %}
+        <tr>
+          <th scope="row">{{ todo.pk }}</th>
+          <td>
+            <a href="{% url 'movies:detail' todo.pk %}">{{ todo.title }}</a>
+          </td>
+
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock body%}
