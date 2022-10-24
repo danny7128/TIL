@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+  {% if request.user.is_authenticated %}
+    {{ request.user }}님 환영합니다
+  {% else %}
+    {{ request.user }}
+    비로그인 상태입니다.
+  {% endif %}
+
+  <h1>기본화면</h1>
+{% endblock body %}

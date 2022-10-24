@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <p>{{ article.pk }}번째 게시글</p>
+  <h1>영화제목={{ article.title }}</h1>
+  <p>{{ article.like_users.count }}</p>
+  {% if request.user.is_authenticated %}
+
+    {% if request.user in article.like_users.all %}
+      <button>
+        <a href="{% url 'articles:likes' article.pk %}">좋아요 취소</a>
+      </button>
+    {% else %}
+      <button>
+        <a href="{% url 'articles:likes' article.pk %}">좋아요</a>
+      {% endif %}
+    {% else %}
+      <button>
+        <a href="{% url 'accounts:login' %}">로그인이 필요합니다.</a>
+      </button>
+    {% endif %}
+  {% endblock body %}
